@@ -11,3 +11,5 @@ LOAN_STATUS = (
 def get_loan_status(name):
     status_dict = {name: code for code, name in LOAN_STATUS}
     return status_dict.get(name)
+
+PAGINATE_BY = 3
