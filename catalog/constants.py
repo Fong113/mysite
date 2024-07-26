@@ -1,3 +1,5 @@
+from enum import Enum
+
 # loan status of bookinstance
 LOAN_STATUS = (
   ('m', 'Maintenance'),
@@ -5,3 +7,7 @@ LOAN_STATUS = (
   ('a', 'Available'),
   ('r', 'Reserved'),
 )
+
+def get_loan_status(name):
+    status_dict = {name: code for code, name in LOAN_STATUS}
+    return status_dict.get(name)
