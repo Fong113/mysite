@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-26 14:05+0700\n"
+"POT-Creation-Date: 2024-07-26 16:24+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -50,17 +50,74 @@ msgstr "Tình trạng sách"
 msgid "Local Library"
 msgstr "Thư viện địa phương"
 
-#: catalog/templates/base_generic.html:41
+#: catalog/templates/base_generic.html:54
 msgid "Home"
 msgstr "Trang chủ"
 
-#: catalog/templates/base_generic.html:43
+#: catalog/templates/base_generic.html:56
 msgid "All books"
 msgstr "Tất cả sách"
 
-#: catalog/templates/base_generic.html:44
+#: catalog/templates/base_generic.html:57
 msgid "All authors"
 msgstr "Tất cả tác giả"
+
+#: catalog/templates/base_generic.html:69
+msgid "previous"
+msgstr "trước"
+
+#: catalog/templates/base_generic.html:73
+msgid "Page"
+msgstr "Trang"
+
+#: catalog/templates/base_generic.html:78
+msgid "next"
+msgstr "tiếp theo"
+
+#: catalog/templates/catalog/book_detail.html:3
+msgid "Title"
+msgstr "Tiêu đề"
+
+#: catalog/templates/catalog/book_detail.html:4
+msgid "Author"
+msgstr "Tác giả"
+
+#: catalog/templates/catalog/book_detail.html:6
+msgid "Summary"
+msgstr "Tóm tắt"
+
+#: catalog/templates/catalog/book_detail.html:7
+msgid "ISBN"
+msgstr "ISBN"
+
+#: catalog/templates/catalog/book_detail.html:8
+msgid "Language"
+msgstr "Ngôn ngữ"
+
+#: catalog/templates/catalog/book_detail.html:9
+msgid "Genre"
+msgstr "Thể loại"
+
+#: catalog/templates/catalog/book_detail.html:11
+#: catalog/templates/index.html:11
+msgid "Copies"
+msgstr "Số bản sao"
+
+#: catalog/templates/catalog/book_detail.html:20
+msgid "Due to be returned"
+msgstr "Hạn trả"
+
+#: catalog/templates/catalog/book_detail.html:22
+msgid "Imprint"
+msgstr "Dấu ấn"
+
+#: catalog/templates/catalog/book_list.html:2
+msgid "Book List"
+msgstr "Danh sách sách"
+
+#: catalog/templates/catalog/book_list.html:13
+msgid "There are no books in the library."
+msgstr "Không có sách trong thư viện."
 
 #: catalog/templates/index.html:3
 msgid "Local Library Home"
@@ -79,24 +136,20 @@ msgid "Dynamic content"
 msgstr "Nội dung động"
 
 #: catalog/templates/index.html:8
-msgid "The library has the following record counts:"
-msgstr "Thư viện có số lượng hồ sơ sau:"
+msgid "The library has the following record counts"
+msgstr "Thư viện có số lượng hồ sơ sau"
 
 #: catalog/templates/index.html:10
-msgid "Books:"
-msgstr "Sách:"
-
-#: catalog/templates/index.html:11
-msgid "Copies:"
-msgstr "Số bản sao:"
+msgid "Books"
+msgstr "Sách"
 
 #: catalog/templates/index.html:13
-msgid "Copies available:"
-msgstr "Số bản sao có sẵn:"
+msgid "Copies available"
+msgstr "Số bản sao có sẵn"
 
 #: catalog/templates/index.html:15
-msgid "Authors:"
-msgstr "Tác giả:"
+msgid "Authors"
+msgstr "Tác giả"
 
 #: locallibrary/settings.py:118
 msgid "English"

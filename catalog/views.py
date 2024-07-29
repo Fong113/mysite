@@ -1,5 +1,7 @@
 from django.shortcuts import render
-from .constants import get_loan_status
+from .constants import get_loan_status, PAGINATE_BY
+from django.views import generic
+from django.shortcuts import get_object_or_404
 
 from catalog.models import Book, Author, BookInstance, Genre
 def index(request):
@@ -15,3 +17,20 @@ def index(request):
     'num_authors': num_authors,
   }
   return render(request, 'index.html', context=context)
+
+class BookListView(generic.ListView):
+  model = Book
+  queryset = Book.objects.select_related('author').all()
+  paginate_by = PAGINATE_BY
+
+  def get_context_data(self, **kwargs):
+    context = super(BookListView, self).get_context_data(**kwargs)
+    context['some_data'] = 'This is just some data'
+    return context
+
+class BookDetailView(generic.DetailView):
+  model = Book
+
+def book_detail_view(request, primary_key):
+  book = get_object_or_404(Book, pk=primary_key)
+  return render(request, 'catalog/book_detail.html', context={'book': book})
