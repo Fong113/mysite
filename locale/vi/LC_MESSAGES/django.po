@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-30 11:09+0700\n"
+"POT-Creation-Date: 2024-08-01 10:36+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,22 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: catalog/forms.py:11
+msgid "Invalid date - renewal in past"
+msgstr "Ngày không hợp lệ - gia hạn trong quá khứ"
+
+#: catalog/forms.py:13
+msgid "Invalid date - renewal more than 4 weeks ahead"
+msgstr "Ngày không hợp lệ - gia hạn quá 4 tuần"
+
+#: catalog/forms.py:17 catalog/forms.py:31
+msgid "Enter a date between now and 4 weeks (default 3)."
+msgstr "Nhập một ngày từ bây giờ đến 4 tuần (mặc định là 3 tuần)."
+
+#: catalog/forms.py:30
+msgid "Renewal date"
+msgstr "Ngày gia hạn"
 
 #: catalog/models.py:11
 msgid "Enter a book genre (e.g. Science Fiction)"
@@ -90,6 +106,20 @@ msgstr "Trang"
 msgid "next"
 msgstr "tiếp theo"
 
+#: catalog/templates/catalog/author_confirm_delete.html:2
+#, fuzzy
+#| msgid "Author"
+msgid "Delete Author"
+msgstr "Xóa Tác giả"
+
+#: catalog/templates/catalog/author_confirm_delete.html:3
+msgid "Are you sure you want to delete the author"
+msgstr "Bạn có chắc chắn muốn xóa tác giả này không?"
+
+#: catalog/templates/catalog/author_confirm_delete.html:6
+msgid "Yes, delete."
+msgstr "Đồng ý, xóa"
+
 #: catalog/templates/catalog/book_detail.html:3
 msgid "Title"
 msgstr "Tiêu đề"
@@ -127,19 +157,37 @@ msgstr "Hạn trả"
 msgid "Imprint"
 msgstr "Dấu ấn"
 
-#: catalog/templates/catalog/book_list.html:2
+#: catalog/templates/catalog/book_list.html:3
 msgid "Book List"
 msgstr "Danh sách sách"
 
-#: catalog/templates/catalog/book_list.html:13
+#: catalog/templates/catalog/book_list.html:14
 msgid "There are no books in the library."
 msgstr "Không có sách trong thư viện."
 
-#: catalog/templates/catalog/bookinstance_list_borrowed_user.html:3
+#: catalog/templates/catalog/book_renew_librarian.html:2
+msgid "Renew"
+msgstr ""
+
+#: catalog/templates/catalog/book_renew_librarian.html:3
+#, fuzzy
+#| msgid "My Borrowed"
+msgid "Borrower"
+msgstr "Sách đã mượn"
+
+#: catalog/templates/catalog/book_renew_librarian.html:5
+msgid "Due date"
+msgstr ""
+
+#: catalog/templates/catalog/book_renew_librarian.html:12
+msgid "Submit"
+msgstr ""
+
+#: catalog/templates/catalog/bookinstance_list_borrowed_user.html:2
 msgid "Borrowed books"
 msgstr "Sách đã mượn"
 
-#: catalog/templates/catalog/bookinstance_list_borrowed_user.html:16
+#: catalog/templates/catalog/bookinstance_list_borrowed_user.html:15
 msgid "There are no books borrowed"
 msgstr "Không có sách trong thư viện."
 
@@ -194,6 +242,7 @@ msgstr "Tiếng Anh"
 #: locallibrary/settings.py:119
 msgid "Vietnamese"
 msgstr "Tiếng Việt"
+
 #: templates/registration/logged_out.html:3
 msgid "Logged out"
 msgstr "Đã đăng xuất"
@@ -235,30 +284,37 @@ msgid "Password reset failed"
 msgstr "Đặt lại mật khẩu thất bại"
 
 #: templates/registration/password_reset_confirm.html:29
+#, fuzzy
+#| msgid ""
+#| "The password reset link was invalid, possibly because it has already been "
+#| "used. Please request a new password reset."
 msgid ""
 "The password reset link was invalid, possibly because it has already "
-"been used. Please request a new password reset."
+"beenused. Please request a new password reset."
 msgstr ""
-"Liên kết đặt lại mật khẩu không hợp lệ, có thể vì nó đã được sử dụng. "
-"Vui lòng yêu cầu đặt lại mật khẩu mới."
+"Liên kết đặt lại mật khẩu không hợp lệ, có thể vì nó đã được sử dụng. Vui "
+"lòng yêu cầu đặt lại mật khẩu mới."
 
 #: templates/registration/password_reset_done.html:3
 msgid ""
 "We've emailed you instructions for setting your password. If they haven't "
 "arrived in a few minutes, check your spam folder."
 msgstr ""
-"Chúng tôi đã gửi email cho bạn hướng dẫn cách đặt lại mật khẩu. Nếu bạn không nhận được trong vài phút, hãy kiểm tra thư mục spam."
+"Chúng tôi đã gửi email cho bạn hướng dẫn cách đặt lại mật khẩu. Nếu bạn "
+"không nhận được trong vài phút, hãy kiểm tra thư mục spam."
 
-#: templates/registration/password_reset_email.html:4
-#, python-format
+#: templates/registration/password_reset_email.html:3
+#, fuzzy, python-format
+#| msgid ""
+#| "\n"
+#| "        Someone asked for password reset for email %(email)s.\n"
+#| "    "
 msgid ""
-"\n"
-"        Someone asked for password reset for email %(email)s.\n"
-"    "
-msgstr ""
-"Ai đó đã yêu cầu đặt lại mật khẩu cho email %(email)s."
+" Someone asked for password reset for email\n"
+"    %(email)s. "
+msgstr "Ai đó đã yêu cầu đặt lại mật khẩu cho email %(email)s."
 
-#: templates/registration/password_reset_email.html:9
+#: templates/registration/password_reset_email.html:6
 msgid "Follow the link below:"
 msgstr "Theo liên kết dưới đây:"
 

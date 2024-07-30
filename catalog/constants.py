@@ -13,3 +13,5 @@ def get_loan_status(name):
     return status_dict.get(name)
 
 PAGINATE_BY = 3
+
+DEFAULT_DATE = '03/11/2003'
