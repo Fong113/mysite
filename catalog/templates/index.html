@@ -1,5 +1,4 @@
-{% extends "base_generic.html" %} {% load i18n %}
-{% block content %}
+{% extends "base_generic.html" %} {% load i18n %} {% block content %}
 <h1>{% trans "Local Library Home" %}</h1>
 <p>
     {% trans "Welcome to LocalLibrary, a website developed by <em> Mozilla Developer Network</em>!" %}
@@ -14,4 +13,11 @@
     </li>
     <li><strong>{% trans "Authors" %}:</strong> {{ num_authors }}</li>
 </ul>
+<p>
+    {% blocktrans count num_visits=num_visits %}
+    You have visited this page {{ num_visits }} time.
+    {% plural %}
+    You have visited this page {{ num_visits }} times.
+    {% endblocktrans %}
+</p>
 {% endblock %}

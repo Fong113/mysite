@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-07-26 16:24+0700\n"
+"POT-Creation-Date: 2024-07-29 11:07+0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -99,7 +99,7 @@ msgid "Genre"
 msgstr "Thể loại"
 
 #: catalog/templates/catalog/book_detail.html:11
-#: catalog/templates/index.html:11
+#: catalog/templates/index.html:10
 msgid "Copies"
 msgstr "Số bản sao"
 
@@ -119,11 +119,11 @@ msgstr "Danh sách sách"
 msgid "There are no books in the library."
 msgstr "Không có sách trong thư viện."
 
-#: catalog/templates/index.html:3
+#: catalog/templates/index.html:2
 msgid "Local Library Home"
 msgstr "Trang chủ thư viện địa phương"
 
-#: catalog/templates/index.html:5
+#: catalog/templates/index.html:4
 msgid ""
 "Welcome to LocalLibrary, a website developed by <em> Mozilla Developer "
 "Network</em>!"
@@ -131,25 +131,36 @@ msgstr ""
 "Chào mừng bạn đến với LocalLibrary, một trang web được phát triển bởi <em> "
 "Mozilla Developer Network</em>!"
 
-#: catalog/templates/index.html:7
+#: catalog/templates/index.html:6
 msgid "Dynamic content"
 msgstr "Nội dung động"
 
-#: catalog/templates/index.html:8
+#: catalog/templates/index.html:7
 msgid "The library has the following record counts"
 msgstr "Thư viện có số lượng hồ sơ sau"
 
-#: catalog/templates/index.html:10
+#: catalog/templates/index.html:9
 msgid "Books"
 msgstr "Sách"
 
-#: catalog/templates/index.html:13
+#: catalog/templates/index.html:12
 msgid "Copies available"
 msgstr "Số bản sao có sẵn"
 
-#: catalog/templates/index.html:15
+#: catalog/templates/index.html:14
 msgid "Authors"
 msgstr "Tác giả"
+
+#: catalog/templates/index.html:17
+msgid ""
+"\n"
+"    You have visited this page %(num_visits)s time.\n"
+"    "
+msgid_plural ""
+"\n"
+"    You have visited this page %(num_visits)s times.\n"
+"    "
+msgstr[0] "Bạn đã truy cập trang này %(num_visits)s lần."
 
 #: locallibrary/settings.py:118
 msgid "English"
