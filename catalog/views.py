@@ -11,6 +11,7 @@ from django.urls import reverse_lazy
 from catalog.models import Author
 import datetime
 from catalog.models import Book, Author, BookInstance, Genre
+
 def index(request):
   """View function for home page of site."""
   num_books = Book.objects.count()
@@ -40,8 +41,15 @@ class BookListView(generic.ListView):
     context['some_data'] = 'This is just some data'
     return context
 
+class AuthorListView(generic.ListView):
+  model = Author
+  paginate_by = PAGINATE_BY
+
 class BookDetailView(generic.DetailView):
   model = Book
+
+class AuthorDetailView(generic.DetailView):
+  model = Author
 
 def book_detail_view(request, primary_key):
   book = get_object_or_404(Book, pk=primary_key)

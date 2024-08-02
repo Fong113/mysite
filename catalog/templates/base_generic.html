@@ -54,7 +54,7 @@
                             <a href="{% url 'index' %}">{% trans "Home" %}</a>
                         </li>
                         <li><a href="{% url 'books' %}">{% trans "All books" %}</a></li>
-                        <li><a href="">{% trans "All authors" %}</a></li>
+                        <li><a href="{% url 'authors' %}">{% trans "All authors" %}</a></li>
                     </ul>
                     <ul class="sidebar-nav">
                         {% if user.is_authenticated %}
